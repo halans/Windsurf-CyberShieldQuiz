@@ -1,0 +1,347 @@
+html, body {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: auto;
+}
+
+#root {
+  min-height: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  width: 100vw;
+}
+
+footer {
+  width: 100vw;
+  background: #2151a1;
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  margin-top: 0.5rem;
+}
+
+.landing-container, .quiz-container {
+  max-width: 940px;
+  width: 100%;
+  margin: 2.2rem auto 2.2rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(33, 81, 161, 0.13);
+  padding: 2.2rem 1.2rem 1.7rem 1.2rem;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  position: relative;
+}
+
+
+@media (max-width: 600px) {
+  .landing-container, .quiz-container {
+    margin: 0.7rem auto 0.7rem auto;
+    padding: 1.1rem 0.3rem 1.1rem 0.3rem;
+    border-radius: 10px;
+  }
+  footer {
+    font-size: 0.92rem;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+  }
+}
+
+
+#root {
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+
+
+.landing-container, .quiz-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(33, 81, 161, 0.13);
+  padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+  text-align: center;
+  max-width: 940px;
+  width: 100%;
+  margin: 2.2rem auto;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.landing-container h1 {
+  font-size: 2.1rem;
+  color: #2151a1;
+  margin-bottom: 0.75rem;
+}
+
+.quiz-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.1rem;
+}
+
+.landing-container .subtitle {
+  color: #444;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.landing-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 1.5rem 0;
+  text-align: left;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.landing-features li {
+  background: #f1f5fb;
+  border-left: 4px solid #2151a1;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1e293b;
+}
+.start-quiz-btn {
+  background: linear-gradient(90deg, #2151a1 60%, #38a169 100%);
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 0.9rem 2.2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgba(33, 81, 161, 0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.start-quiz-btn:hover, .start-quiz-btn:focus {
+  background: linear-gradient(90deg, #174080 60%, #276749 100%);
+  box-shadow: 0 4px 16px rgba(33, 81, 161, 0.14);
+}
+
+.main-app header {
+  margin-bottom: 2rem;
+}
+
+.main-app h1 {
+  font-size: 2.2rem;
+  color: #2151a1;
+}
+.subtitle {
+  color: #444;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+}
+
+
+
+.category {
+  color: #1e6b52;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+
+.question {
+  font-size: 1.22rem;
+  margin: 1rem 0 1.5rem 0;
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: 0.01em;
+}
+
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.options li {
+  margin-bottom: 0.75rem;
+}
+.options button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #b6c2d6;
+  border-radius: 8px;
+  background: #fff;
+  color: #1a202c;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  text-align: left;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(33,81,161,0.03);
+}
+
+.options button:hover:not(:disabled),
+.options button:focus:not(:disabled) {
+  background: #e0e7ff;
+  border-color: #2151a1;
+}
+.options button.correct {
+  background: #c6f6d5;
+  border-color: #38a169;
+  color: #21512a;
+}
+
+.options button.incorrect {
+  background: #fed7d7;
+  border-color: #e53e3e;
+  color: #a12b21;
+}
+
+.options button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #f6f7fa;
+  color: #b0b7c3;
+  border-color: #e5e7eb;
+}
+
+
+.explanation {
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  text-align: left;
+}
+.explanation-correct {
+  background: #f0fdf4;
+  border-left: 5px solid #38a169;
+  color: #21512a;
+}
+.explanation-incorrect {
+  background: #ffeaea;
+  border-left: 5px solid #e53e3e;
+  color: #a12b21;
+}
+
+.scenario-box {
+  background: #e3f0fa;
+  border-left: 5px solid #1976d2;
+  color: #174080;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.1rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+.scenario-label {
+  font-weight: 700;
+  color: #174080;
+  margin-right: 0.3em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.security-tip-label {
+  font-weight: 700;
+  color: #174080;
+  margin-right: 0.3em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+.security-tip-box {
+  background: #e3f0fa;
+  border-left: 5px solid #1976d2;
+  color: #21512a;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin: 0.7rem 0 0.7rem 0;
+  font-size: 1.02rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  text-align: left;
+}
+
+
+.explanation strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-wrapper {
+  margin: 1rem 0 1.5rem 0;
+  background: #e0e7ff;
+  border-radius: 8px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar {
+  background: linear-gradient(90deg, #2151a1 40%, #38a169 100%);
+  height: 100%;
+  transition: width 0.4s ease;
+}
+.progress-label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 0.95rem;
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.category-progress-grid {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.category-progress-grid h4, .category-progress-grid h3 {
+  margin-bottom: 1rem;
+  color: #2151a1;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.donut-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.2rem 1.2rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+@media (max-width: 600px) {
+  .donut-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem 0.8rem;
+  }
+}
+
+
+button {
+  outline: none;
+}
