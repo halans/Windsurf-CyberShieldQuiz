@@ -75,7 +75,8 @@ const LandingPage = ({ onStart }) => (
       Start Quiz
     </button>
     <p className="landing-footer">Quiz takes approximately 15-20 minutes to complete.</p>
-    <p className="landing-footer">&copy; {new Date().getFullYear()} - Created with <a href="https://windsurf.com/refer?referral_code=6sjx7c1wyfoahfqt" target="_blank" rel="noopener noreferrer" aria-label="Windsurf">Windsurf</a>. Hosted on <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" aria-label="Cloudflare">Cloudflare</a>.</p>
+    <p className="landing-footer">&copy; {new Date().getFullYear()} - Created with <a href="https://windsurf.com/refer?referral_code=6sjx7c1wyfoahfqt" target="_blank" rel="noopener noreferrer" aria-label="Windsurf">Windsurf</a>. Hosted on <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" aria-label="Cloudflare">Cloudflare</a>.
+      Find it on <a href="https://github.com/halans/Windsurf-CyberShieldQuiz" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></p>
     <p className="landing-footer">This app is designed to educate and does not substitute for professional cybersecurity advice.</p>
   </div>
 );
