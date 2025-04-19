@@ -373,6 +373,17 @@ footer {
   flex-shrink: 0;
 }
 
+@media (max-width: 600px) {
+  .scenario-box  {
+    display: block;
+
+  }
+  .scenario-box span {
+    display: block;
+  }
+}
+
+
 .security-tip-label {
   font-weight: 700;
   color: var(--info-text);
@@ -380,7 +391,6 @@ footer {
   white-space: nowrap;
   flex-shrink: 0;
 }
-
 
 .security-tip-box {
   background: var(--info-bg);
@@ -394,6 +404,16 @@ footer {
   align-items: flex-start;
   gap: 0.5em;
   text-align: left;
+}
+
+@media (max-width: 600px) {
+  .security-tip-box  {
+    display: block;
+
+  }
+  .security-tip-box span {
+    display: block;
+  }
 }
 
 
