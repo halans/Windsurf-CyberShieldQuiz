@@ -1,4 +1,4 @@
-# Cybersecurity Awareness Quiz App
+# CyberShield: Cybersecurity Awareness Quiz App
 
 This is an interactive quiz application designed to boost cybersecurity awareness for small business owners and employees. It features scenario-based questions, instant feedback, progress tracking, and a downloadable PDF certificate.
 

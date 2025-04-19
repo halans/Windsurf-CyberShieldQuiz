@@ -159,7 +159,7 @@ const Quiz = ({ onExit }) => {
       </button>
       {/* Main card content */}
       <div style={{ maxWidth: 520, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #0001', padding: '2.2rem 2.1rem 1.7rem 2.1rem', marginBottom: 36 }}>
-        <ProgressBar value={current} max={questions.length} />
+        <ProgressBar value={current + (showExplanation ? 1 : 0)} max={questions.length} />
         <h2 style={{ marginBottom: 12, marginTop: 8 }}>Question {current + 1} of {questions.length}</h2>
         {/* Category and scenario */}
         <div style={{ marginBottom: q.scenario ? 16 : 0 }}>
