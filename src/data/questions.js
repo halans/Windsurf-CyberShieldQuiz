@@ -351,10 +351,10 @@ const questions = [
     options: [
       'It makes passwords load too slowly when accessing websites',
       'It prevents the use of complex passwords since they don\'t need to be typed',
-      'It allows anyone with access to the device to potentially access those accounts without authentication',
-      'It prevents password managers from working properly'
+      'It prevents password managers from working properly',
+      'It allows anyone with access to the device to potentially access those accounts without authentication'
     ],
-    answer: 2,
+    answer: 3,
     explanation: 'When passwords are saved in browsers, anyone who gains access to the device—whether through theft, unauthorized use, or malware—may be able to access those accounts without knowing the password.',
     securityTip: 'Use a dedicated password manager instead of browser password saving. If employees must use browser password features, require device encryption, screen locks with short timeouts, and consider a policy requiring the browser\'s master password feature.',
     scenario: 'Your employees frequently work on company laptops in public locations like cafes and airports, and many use the browser\'s "remember password" feature for convenience.'

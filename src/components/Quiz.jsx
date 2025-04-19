@@ -195,7 +195,7 @@ const Quiz = ({ onExit }) => {
             <div className={`explanation ${selected === q.answer ? 'explanation-correct' : 'explanation-incorrect'}`} aria-live="polite" tabIndex={0}>
               <strong>{selected === q.answer ? "Correct!" : "Incorrect."}</strong>
               <p>{q.explanation}</p>
-              <button onClick={nextQuestion} title="Next question" aria-label="Next question" tabIndex={0} style={{ lineHeight: '1.5' }} >
+              <button onClick={nextQuestion} title="Next question" aria-label="Next question" tabIndex={0} style={{ lineHeight: '1.5', color: 'var(--primary)' }} >
                 Next <CircleArrowRight size={20} color="var(--primary)" style={{ marginLeft: 8, verticalAlign: 'middle' }} />
               </button>
             </div>
