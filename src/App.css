@@ -423,7 +423,7 @@ footer {
 }
 
 .progress-bar-wrapper {
-  margin: 1rem 0 1.5rem 0;
+  margin: 0 0 1.5rem 0;
   background: var(--progress-bg);
   border-radius: 8px;
   height: 24px;

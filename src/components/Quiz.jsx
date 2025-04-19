@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import questions from "../data/questions";
 import ProgressBar from "./ProgressBar";
 import CategoryDonut from "./CategoryDonut";
-import { CircleArrowRight } from "lucide-react";
+import { CircleArrowRight, CircleX, SquareX } from "lucide-react";
 import "../App.css";
 
 function shuffle(array) {
@@ -136,15 +136,12 @@ const Quiz = ({ onExit }) => {
         tabIndex={0}
         style={{
           position: 'absolute',
-          top: 24,
-          right: 24,
-          background: '#e53e3e',
-          color: '#fff',
+          top: 25,
+          right: 25,
+          background: 'none',
+          color: '#e53e3e',
           border: 'none',
-          borderRadius: 25,
-          padding: '0.45rem 0.7rem',
-          fontWeight: 600,
-          fontSize: 15,
+          padding: '0',
           cursor: 'pointer',
           zIndex: 10
         }}
@@ -157,9 +154,7 @@ const Quiz = ({ onExit }) => {
             if (onExit) onExit();
           }
         }}
-      >
-        X
-      </button>
+      ><SquareX size={30} /></button>
       {/* Main card content */}
       <div style={{ maxWidth: 520, margin: '0 auto', background: '#fff', borderRadius: 18, boxShadow: '0 4px 24px #0001', padding: '2.2rem 2.1rem 1.7rem 2.1rem', marginBottom: 36 }}>
         <ProgressBar value={current + (showExplanation ? 1 : 0)} max={questions.length} />
