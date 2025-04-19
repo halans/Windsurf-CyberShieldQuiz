@@ -184,10 +184,10 @@ const questions = [
     options: [
       'Software to detect and prevent phishing attempts',
       'Training materials to educate employees about phishing',
-      'Packaged tools and templates that help attackers create convincing phishing campaigns',
-      'Specialized hardware for stealing data from physical locations'
+      'Specialized hardware for stealing data from physical locations',
+      'Packaged tools and templates that help attackers create convincing phishing campaigns' 
     ],
-    answer: 2,
+    answer: 3,
     explanation: 'Phishing kits are packaged collections of files that simplify the process of creating and deploying phishing sites. They typically include duplicate website templates, scripts for collecting and transmitting stolen data, and evasion techniques.',
     securityTip: 'Look for subtle signs of fake websites: incorrect URLs, missing HTTPS, unusual request methods, grammar errors, or page elements that don\'t quite match the legitimate site.',
     scenario: 'Your security team discovered several employees received emails directing them to a site identical to your company\'s payroll portal, but with a slightly different URL.'

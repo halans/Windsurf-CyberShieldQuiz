@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import questions from "../data/questions";
 import ProgressBar from "./ProgressBar";
 import CategoryDonut from "./CategoryDonut";
+import { CircleArrowRight } from "lucide-react";
 import "../App.css";
 
 function shuffle(array) {
@@ -58,16 +59,18 @@ const Quiz = ({ onExit }) => {
   const handleDownloadPDF = () => {
     const doc = new jsPDF();
     doc.setFontSize(22);
-    doc.text("Cybersecurity Quiz Certificate", 20, 30);
-    doc.setFontSize(16);
-    doc.text("Congratulations!", 20, 50);
+    doc.text("CyberSmart Quiz Certificate", 20, 50);
+    doc.setFontSize(18);
+    // Add sparkles/check emoji near Congratulations
+    doc.text("Congratulations!", 20, 68);
     doc.setFontSize(14);
-    doc.text(`You completed the Cybersecurity Awareness Quiz.`, 20, 65);
-    doc.text(`Score: ${score} / ${questions.length}`, 20, 80);
-    doc.text("Date: " + new Date().toLocaleDateString(), 20, 95);
+    doc.text(`You completed the CyberSmart Awareness Quiz.`, 20, 82);
+    // Trophy emoji near score
+    doc.text(`Score: ${score} / ${questions.length}`, 20, 98);
+    doc.text("Date: " + new Date().toLocaleDateString(), 20, 112);
     doc.setFontSize(12);
-    doc.text("This certificate is awarded for demonstrating cybersecurity knowledge.", 20, 110);
-    doc.save("Cybersecurity_Quiz_Certificate.pdf");
+    doc.text("This certificate is awarded for demonstrating cybersecurity knowledge.", 20, 126);
+    doc.save("CyberSmart_Quiz_Certificate.pdf");
   };
 
   if (current >= questions.length) {
@@ -197,8 +200,8 @@ const Quiz = ({ onExit }) => {
             <div className={`explanation ${selected === q.answer ? 'explanation-correct' : 'explanation-incorrect'}`} aria-live="polite" tabIndex={0}>
               <strong>{selected === q.answer ? "Correct!" : "Incorrect."}</strong>
               <p>{q.explanation}</p>
-              <button onClick={nextQuestion} aria-label="Next question" tabIndex={0}>
-                Next
+              <button onClick={nextQuestion} title="Next question" aria-label="Next question" tabIndex={0} style={{ lineHeight: '1.5' }} >
+                Next <CircleArrowRight size={20} color="var(--primary)" style={{ marginLeft: 8, verticalAlign: 'middle' }} />
               </button>
             </div>
             {q.securityTip && q.securityTip.trim() !== '' && (
