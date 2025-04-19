@@ -209,12 +209,11 @@ footer {
 }
 .start-quiz-btn {
   outline: none;
-
   display: inline-flex;
   margin-left: auto;
   margin-right: auto;
-
-  background: var(--button-gradient);
+  background: linear-gradient(270deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
+  background-size: 400% 400%;
   color: var(--card-bg);
   border: none;
   font-size: 1.1rem;
@@ -226,12 +225,27 @@ footer {
   letter-spacing: 0.01em;
   box-shadow: var(--card-shadow-light);
   transition: background 0.2s, box-shadow 0.2s;
+  animation: quiz-gradient-move 6.5s ease-in-out infinite;
 }
+
+@keyframes quiz-gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+ 
 .start-quiz-btn:hover, .start-quiz-btn:focus, .start-quiz-btn:focus-visible {
   outline: 3px solid var(--primary);
   outline-offset: 2px;
-
-  background: var(--button-gradient-hover);
+  background: linear-gradient(270deg, var(--accent) 0%, var(--primary) 50%, var(--accent) 100%);
+  background-size: 400% 400%;
+  animation: quiz-gradient-move 2.5s linear infinite;
   box-shadow: var(--card-shadow-hover);
 }
 
